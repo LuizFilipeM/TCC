@@ -2,24 +2,24 @@ def wagner_whitin(d, s, h):
     
     N = len(d) 
 
-    # Prefix sum de h para acelerar
     H = [0] * (N + 1)
+    
     for i in range(N):
-        H[i+1] = H[i] + h[i]
+        H[i+1] = H[i] + h # Trata o custo de armazenamento como constante 
 
     # F[t] = custo mínimo até t
     F = [0] * N
     parent = [0] * N
 
-    # Função custo correto
+    # Função custo
     def cost(j, t):
-        total = s[j]
+        total = s
         for k in range(j+1, t+1):
             holding = H[k] - H[j]  # custo acumulado de h[j] até h[k-1]
-            total += d[k] * holding
+            total += d[k] * holding # mais custo indireto
         return total
 
-    # DP
+    
     for t in range(N):
         F[t] = float('inf')
         for j in range(t + 1):
@@ -43,24 +43,17 @@ def wagner_whitin(d, s, h):
 
     return F[N-1], pedidos
 
-def read_data():
-    with open("ABS1_50_6_copy.dat", "r") as f:
-        linhas = f.readlines()
+def main(d, s, h):
 
-    d = list(map(int, linhas[0].split()))
+    print("INICIANDO WW...\n\n")
+
     
-    s = list(map(int, linhas[1].split()))
-    
-    return d, s
 
-d = []
-s = []
+    custo, pedidos = wagner_whitin(d, s, h)
 
-d, s = read_data()
+    print("Custo total:", custo)
+    print("Pedidos:", pedidos)
 
-h = [1] * len(d)
+    print("\n\nWW FINALIZADO COM SUCESSO\n\n")
 
-custo, pedidos = wagner_whitin(d, s, h)
-
-print("Custo total:", custo)
-print("Pedidos:", pedidos)
+    return custo, pedidos
