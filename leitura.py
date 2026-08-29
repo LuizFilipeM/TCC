@@ -23,7 +23,7 @@ def data():
 
 
     # Lê todas as linhas do arquivo
-    with open("ABS1_50_6.dat", "r") as f:
+    with open("ABS1_50_6_copy.dat", "r") as f:
         linhas = f.readlines()
 
     # Converte os dados para float

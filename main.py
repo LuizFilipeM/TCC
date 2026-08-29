@@ -8,20 +8,19 @@ clientes, N, T = leitura.data()
 
 #Inicialização de variáveis
 demanda_ww = []
-custo_setup_ww = clientes[0].s
 
 for i in range(0,T):
     aux = 0
 
     for j in clientes[1:N+1]:
-        aux += j.d[i]        
+        aux += j.d[i]
 
     demanda_ww.append(aux)
 
 
 def main():
-    custo, pedidos = IRP_WW.main(demanda_ww, clientes[0].s, clientes[0].h)
-
+    #custo, pedidos = IRP_WW.main(demanda_ww, clientes)
+    IRP_WW.main(demanda_ww, clientes)
 
     # Chamada do pyVRP
 
