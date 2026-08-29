@@ -20,10 +20,8 @@ def data():
         d: List[float] = field(default_factory=list)  # Demanda
 
 
-
-
     # Lê todas as linhas do arquivo
-    with open("ABS1_50_6_copy.dat", "r") as f:
+    with open("ABS1_50_6.dat", "r") as f:
         linhas = f.readlines()
 
     # Converte os dados para float
@@ -45,7 +43,7 @@ def data():
 
     for i in range(K):
         contador = 4 + i
-        Q.append(dados[contador][0])  # capacidade do veículo
+        Q.append(dados[contador][0])  # 
 
     contador = 5 + K
 

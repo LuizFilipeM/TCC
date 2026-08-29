@@ -20,7 +20,7 @@ for i in range(0,T):
 
 def main():
     #custo, pedidos = IRP_WW.main(demanda_ww, clientes)
-    IRP_WW.main(demanda_ww, clientes)
+    IRP_WW.main(demanda_ww, clientes, N)
 
     # Chamada do pyVRP
 
