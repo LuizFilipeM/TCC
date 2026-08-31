@@ -27,9 +27,7 @@ O algoritmo de **Wagner-Whitin**, baseado em programação dinâmica, é utiliza
 
 Para o desenvolvimento e avaliação dos modelos e heurísticas, são utilizadas ferramentas de **Programação Matemática e Otimização Combinatória**, incluindo:
 
-* **Julia** – linguagem utilizada na implementação dos modelos;
-* **JuMP** – modelagem matemática em Julia;
-* **HiGHS** – solver de otimização;
+* **Python** – linguagem utilizada na implementação dos modelos;
 * **PyVRP** – ferramenta utilizada para apoiar a resolução do componente de roteamento;
 * **Wagner-Whitin** – programação dinâmica aplicada ao dimensionamento de lotes.
 
