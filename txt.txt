@@ -1,3 +1,0 @@
-O algoritimo de Wagner-Within recebe como entrada um mapa de horizonte com x períodos e a demanda de todos
-os perídos neste horizonte.
-
