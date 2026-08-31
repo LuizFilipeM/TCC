@@ -1,7 +1,5 @@
 from dataclasses import dataclass, field
 from typing import List
-import os
-
 
 def data():
     
@@ -21,7 +19,7 @@ def data():
 
 
     # Lê todas as linhas do arquivo
-    with open("../Instancias/ABS1_50_6.dat", "r") as f:
+    with open("Instancias/ABS1_50_6.dat", "r") as f:
         linhas = f.readlines()
 
     # Converte os dados para float
